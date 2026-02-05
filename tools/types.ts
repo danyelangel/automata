@@ -14,6 +14,21 @@ export interface ExecutionContext {
     id: string
     email?: string
   }
+  /** Service configuration for external APIs */
+  services?: {
+    perplexity?: {
+      apiKey: string
+      apiUrl?: string
+    }
+  }
+  /** Callback to track usage metrics */
+  trackUsage?: (params: {
+    model: string
+    input_tokens: number
+    output_tokens: number
+    function_called: string
+    trigger: string
+  }) => Promise<void>
   /** Additional context data */
   [key: string]: unknown
 }
