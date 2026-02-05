@@ -89,6 +89,23 @@ export type ToolExecutor = (
 ) => Promise<ToolResult>
 
 /**
+ * Optional UI metadata for tool selector and display.
+ * When provided, registry-based tool config (e.g. getToolConfigs) uses these values.
+ */
+export interface ToolUIMetadata {
+  /** Display category (e.g. 'web', 'browser', 'content') */
+  category?: string
+  /** Material icon name or icon identifier */
+  icon?: string
+  /** Human-readable label (defaults to tool name) */
+  label?: string
+  /** If true, tool is shown but not selectable (e.g. premium) */
+  premium?: boolean
+  /** Feature flag key; tool is hidden when this flag is disabled in app settings */
+  flag?: string
+}
+
+/**
  * Full definition of a tool including its executor function.
  */
 export interface ToolDefinition {
@@ -104,4 +121,6 @@ export interface ToolDefinition {
   strict?: boolean
   /** The function that executes the tool */
   executor: ToolExecutor
+  /** Optional UI metadata for tool selector (category, icon, label) */
+  ui?: ToolUIMetadata
 }
