@@ -11,3 +11,6 @@ export * from './components/widgets'
 
 // Agent engine
 export * from './engine'
+
+// Automation executor
+export * from './automations'
