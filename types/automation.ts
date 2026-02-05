@@ -3,6 +3,8 @@
  * Defines when and how an agent should run automatically.
  */
 export interface Automation {
+  /** Unique identifier */
+  id?: string
   /** Human-readable automation name */
   name: string
   /** Project this automation belongs to */
@@ -21,10 +23,17 @@ export interface Automation {
   executions?: number
   /** Last update timestamp */
   updatedAt?: number
+  /** Creation timestamp */
+  createdAt?: number
   /** When the automation should start being eligible to run */
   startDate: number
   /** Maximum number of times this automation can execute */
   maxExecutions: number
+  /** Context entity IDs - can be sites, articles, briefs, etc. (pluggable) */
+  sites?: string[]
+  articles?: string[]
+  briefs?: string[]
+  [key: string]: unknown // Allow additional context types
 }
 
 /**
