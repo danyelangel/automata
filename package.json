@@ -10,11 +10,24 @@
     ".": "./index.ts"
   },
   "files": [
-    "index.ts"
+    "index.ts",
+    "engine",
+    "tools",
+    "automations",
+    "components",
+    "composables",
+    "types"
   ],
-  "peerDependencies": {},
-  "dependencies": {},
+  "peerDependencies": {
+    "vue": "^3.0.0",
+    "firebase": "^11.0.0",
+    "vuefire": "^3.0.0"
+  },
+  "dependencies": {
+    "affordance": "link:../affordance"
+  },
   "devDependencies": {
+    "@types/node": "^22.0.0",
     "typescript": "~5.7.3"
   }
 }
