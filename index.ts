@@ -9,6 +9,9 @@ export * from './tools'
 // Widget registry
 export * from './components/widgets'
 
+// Agent UI components
+export * from './components/TheAgent'
+
 // Agent engine
 export * from './engine'
 

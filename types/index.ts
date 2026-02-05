@@ -9,3 +9,13 @@ export type { ContextItem } from './context'
 
 // Automation types
 export type { Automation, SkipResult } from './automation'
+
+// UI types
+export type {
+  InputItem,
+  OutputItem,
+  FunctionCallItem,
+  FunctionCallOutputItem,
+  MessageItem,
+  InputStatus,
+} from './ui'

@@ -1,0 +1,5 @@
+export { default as TheAgent } from './TheAgent.vue'
+export { default as MessageList } from './MessageList.vue'
+export * from './messages'
+export * from './composer'
+export * from './widgets'
