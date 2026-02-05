@@ -8,3 +8,6 @@ export * from './tools'
 
 // Widget registry
 export * from './components/widgets'
+
+// Agent engine
+export * from './engine'
