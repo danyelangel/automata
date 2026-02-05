@@ -26,6 +26,30 @@ export interface ExecutionContext {
         sessionUrl?: string
       }>
     }
+    openai?: {
+      generateImage: (params: {
+        prompt: string
+        size?: string
+        transparentBackground?: boolean
+        format?: 'png' | 'webp' | 'jpeg'
+      }) => Promise<{ imageData: string, format: string }>
+      callStructuredLLM: (params: {
+        model?: string
+        systemPrompt: string
+        userPrompt: string
+        schema: any
+        trigger?: string
+      }) => Promise<{ data: any, usage?: { input_tokens: number, output_tokens: number } }>
+    }
+    firebase?: {
+      storage: {
+        upload: (data: Buffer, path: string, contentType: string) => Promise<string>
+      }
+      firestore: {
+        add: (collection: string, data: any) => Promise<string>
+        query: (collection: string, filters: any) => Promise<any[]>
+      }
+    }
   }
   /** Callback to track usage metrics */
   trackUsage?: (params: {
