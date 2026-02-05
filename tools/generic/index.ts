@@ -1,1 +1,6 @@
 export { SearchWeb, executeSearchWeb } from './SearchWeb.tool'
+export { BrowserNavigate, executeBrowserNavigate } from './BrowserNavigate.tool'
+export { BrowserAct, executeBrowserAct } from './BrowserAct.tool'
+export { BrowserExtract, executeBrowserExtract } from './BrowserExtract.tool'
+export { BrowserObserve, executeBrowserObserve } from './BrowserObserve.tool'
+export { BrowserClose, executeBrowserClose } from './BrowserClose.tool'

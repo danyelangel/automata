@@ -217,7 +217,7 @@ describe('SearchWeb Tool', () => {
 
       expect(result.success).toBe(false)
       expect(result.output).toBe('')
-      expect(result.error).toBe('Perplexity API key not configured in execution context')
+      expect(result.error).toBe('Perplexity API key not configured. Provide it via context.services.perplexity.apiKey or PERPLEXITY_API_KEY environment variable')
       expect(mockFetch).not.toHaveBeenCalled()
     })
 
@@ -230,7 +230,7 @@ describe('SearchWeb Tool', () => {
       )
 
       expect(result.success).toBe(false)
-      expect(result.error).toBe('Perplexity API key not configured in execution context')
+      expect(result.error).toBe('Perplexity API key not configured. Provide it via context.services.perplexity.apiKey or PERPLEXITY_API_KEY environment variable')
     })
 
     it('should handle API error response', async () => {

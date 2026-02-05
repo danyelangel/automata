@@ -20,6 +20,12 @@ export interface ExecutionContext {
       apiKey: string
       apiUrl?: string
     }
+    browser?: {
+      getClient: (sessionId?: string) => Promise<{
+        stagehand: any // Stagehand instance
+        sessionUrl?: string
+      }>
+    }
   }
   /** Callback to track usage metrics */
   trackUsage?: (params: {
