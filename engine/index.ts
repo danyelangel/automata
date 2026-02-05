@@ -1,6 +1,13 @@
 export { processAgentController } from './agentController'
+export {
+  createAgentLoopHandler,
+  createAgentLoop,
+  defaultGenerateName,
+  defaultGetRules
+} from './agentLoop'
+export type { AgentLoopConfig, DocumentChangeEvent, CloudFunctionHandler } from './agentLoop.types'
 export { running, awaiting_tool } from './statuses'
-export { buildAgentSystemPrompt, DEFAULT_INSTRUCTIONS } from './prompts/systemPrompt'
+export { buildAgentSystemPrompt, DEFAULT_SYSTEM_PROMPT } from './prompts/systemPrompt'
 export type {
   AgentStatus,
   HistoryItem,
