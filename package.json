@@ -1,0 +1,20 @@
+{
+  "name": "automata",
+  "version": "0.1.0",
+  "description": "Agentic utilities and tools for autonomous systems",
+  "private": false,
+  "type": "module",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "exports": {
+    ".": "./index.ts"
+  },
+  "files": [
+    "index.ts"
+  ],
+  "peerDependencies": {},
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "~5.7.3"
+  }
+}
