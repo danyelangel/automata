@@ -13,6 +13,7 @@
   "exports": {
     ".": "./index.ts",
     "./core": "./core/index.ts",
+    "./composables": "./composables/index.ts",
     "./tools/generic": "./core/tools/generic/index.ts"
   },
   "files": [
