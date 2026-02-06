@@ -1,5 +1,5 @@
 import { computed, type Ref, type ComputedRef } from 'vue'
-import type { CloudAgent } from '../types/agent'
+import type { CloudAgent } from '../core/types/agent'
 
 /**
  * Data access adapter interface for agents.

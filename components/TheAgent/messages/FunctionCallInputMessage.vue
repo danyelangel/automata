@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { FunctionCallItem, MessageItem } from '../../../types/ui'
+import type { FunctionCallItem, MessageItem } from '../../../core/types/ui'
 import type { WidgetRegistry } from '../../widgets/WidgetRegistry'
 import FunctionCallMessage from './FunctionCallMessage.vue'
 

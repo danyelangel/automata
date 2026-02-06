@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import type { FunctionCallOutputItem, MessageItem } from '../../../types/ui'
+import type { FunctionCallOutputItem, MessageItem } from '../../../core/types/ui'
 import type { WidgetRegistry } from '../../widgets/WidgetRegistry'
 import AgentStatusMessage from './AgentStatusMessage.vue'
 import FunctionCallMessage from './FunctionCallMessage.vue'

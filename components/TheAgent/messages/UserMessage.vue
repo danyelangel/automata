@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import type { InputItem } from '../../../types/ui'
+import type { InputItem } from '../../../core/types/ui'
 
 const props = defineProps<{
   message: InputItem

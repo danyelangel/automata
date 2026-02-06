@@ -1,5 +1,6 @@
 import type {
   CloudAgent,
+  HistoryItem,
   AgentProcessResult,
   ControllerOptions
 } from './types'
@@ -46,13 +47,13 @@ export async function processAgentController(
   if (lastMessage && lastMessage.type === 'message' && lastMessage.role !== 'user') {
     const lastNMessages = history.slice(-MESSAGE_PAUSE_THRESHOLD)
     const allLastNAreAssistantMessages = lastNMessages.length === MESSAGE_PAUSE_THRESHOLD &&
-      lastNMessages.every(msg => msg.type === 'message' && msg.role !== 'user')
+      lastNMessages.every((msg: HistoryItem) => msg.type === 'message' && msg.role !== 'user')
 
     if (allLastNAreAssistantMessages) {
       logger.info('Agent controller pausing - last ' + MESSAGE_PAUSE_THRESHOLD + ' history items are messages from assistant', {
         projectId: agent.projectId,
         lastMessageType: lastMessage.type,
-        lastNMessageTypes: lastNMessages.map(msg => msg.type)
+        lastNMessageTypes: lastNMessages.map((msg: HistoryItem) => msg.type)
       })
       return { history, status: 'paused' }
     }

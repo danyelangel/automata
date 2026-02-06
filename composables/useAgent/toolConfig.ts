@@ -1,4 +1,4 @@
-import type { ToolRegistry } from '../../tools'
+import type { ToolRegistry } from '../../core/tools'
 
 /**
  * UI configuration for a tool in the tool selector.

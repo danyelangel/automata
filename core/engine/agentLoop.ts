@@ -95,7 +95,7 @@ export function createAgentLoopHandler(config: AgentLoopConfig): CloudFunctionHa
     hotlTools,
     messagePauseThreshold,
     generateName,
-    getRules
+    getRules: _getRules
   } = config
 
   // Build controller options

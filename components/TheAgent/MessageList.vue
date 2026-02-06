@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useScroll } from '@vueuse/core'
 import { ref, watch, onUnmounted } from 'vue'
-import type { MessageItem } from '../../types/ui'
+import type { MessageItem } from '../../core/types/ui'
 import type { WidgetRegistry } from '../widgets/WidgetRegistry'
 import {
   UserMessage,

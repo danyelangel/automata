@@ -1,5 +1,5 @@
 import { computed, type Ref, type ComputedRef } from 'vue'
-import type { Automation } from '../types/automation'
+import type { Automation } from '../core/types/automation'
 
 /**
  * Data access adapter interface for automations.

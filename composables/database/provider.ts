@@ -1,6 +1,6 @@
 import type { Ref, ComputedRef } from 'vue'
-import type { CloudAgent } from '../../types/agent'
-import type { Automation } from '../../types/automation'
+import type { CloudAgent } from '../../core/types/agent'
+import type { Automation } from '../../core/types/automation'
 
 /** Reactive reference to a list or single entity (Ref or ComputedRef). */
 type MaybeRef<T> = Ref<T> | ComputedRef<T>

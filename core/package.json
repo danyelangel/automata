@@ -1,0 +1,21 @@
+{
+  "name": "automata-core",
+  "version": "0.1.0",
+  "description": "Automata backend: types, tools, engine, automations (no Vue)",
+  "private": false,
+  "type": "module",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "exports": {
+    ".": "./index.ts",
+    "./tools/generic": "./tools/generic/index.ts"
+  },
+  "files": ["index.ts", "types", "tools", "engine", "automations"],
+  "peerDependencies": {
+    "firebase": "^11.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "~5.7.3"
+  }
+}

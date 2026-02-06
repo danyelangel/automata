@@ -11,16 +11,15 @@
     "test:watch": "vitest"
   },
   "exports": {
-    ".": "./index.ts"
+    ".": "./index.ts",
+    "./core": "./core/index.ts",
+    "./tools/generic": "./core/tools/generic/index.ts"
   },
   "files": [
     "index.ts",
-    "engine",
-    "tools",
-    "automations",
+    "core",
     "components",
-    "composables",
-    "types"
+    "composables"
   ],
   "peerDependencies": {
     "firebase": "^11.0.0",

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { OutputItem } from '../../../types/ui'
+import type { OutputItem } from '../../../core/types/ui'
 import { parseMarkdown } from '../../../utils/markdownParser'
 
 defineProps<{

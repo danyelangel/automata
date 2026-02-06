@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import type { MessageItem } from '../../types/ui'
+import type { MessageItem } from '../../core/types/ui'
 import type { WidgetRegistry } from '../widgets/WidgetRegistry'
 import ComposeMessage from './composer/ComposeMessage.vue'
 import MessageList from './MessageList.vue'

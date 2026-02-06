@@ -8,9 +8,9 @@ export type {
   OutputItem,
   FunctionCallItem,
   FunctionCallOutputItem,
-} from '../../types/ui'
-export type { MessageItem } from '../../types/ui'
-import type { MessageItem } from '../../types/ui'
+} from '../../core/types/ui'
+export type { MessageItem } from '../../core/types/ui'
+import type { MessageItem } from '../../core/types/ui'
 
 /** Union type for a single conversation history entry */
 export type Item = MessageItem

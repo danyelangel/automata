@@ -2,7 +2,7 @@
 import { vOnClickOutside } from '@vueuse/components'
 import { useInfiniteScroll, onKeyStroke } from '@vueuse/core'
 import { ref, computed } from 'vue'
-import type { ContextItem } from '../../../types/context'
+import type { ContextItem } from '../../../core/types/context'
 
 interface ContextTypeConfig {
   type: string

@@ -2,7 +2,7 @@
 import { vOnClickOutside } from '@vueuse/components'
 import { onKeyStroke } from '@vueuse/core'
 import { ref, computed } from 'vue'
-import type { ToolItem } from '../../../types/tool'
+import type { ToolItem } from '../../../core/types/tool'
 
 interface ToolConfig {
   type: string

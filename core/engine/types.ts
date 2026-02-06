@@ -3,7 +3,6 @@ import type { CloudAgent, HistoryItem } from '../types/agent'
 import type { ContextItem } from '../types/context'
 import type { ToolItem } from '../types/tool'
 
-// Re-export types for internal engine use
 export type { CloudAgent, HistoryItem, ContextItem, ToolItem }
 
 /**

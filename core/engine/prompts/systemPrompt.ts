@@ -151,7 +151,7 @@ function buildDefaultSystemPrompt(
   if (agent.context.length > 0) {
     tags.push({
       tag: 'user_context',
-      value: agent.context.map(item => ({
+      value: agent.context.map((item: ContextItem) => ({
         tag: 'item',
         value: [
           { tag: 'type', value: item.type },
@@ -162,11 +162,11 @@ function buildDefaultSystemPrompt(
     })
   }
 
-  const nonImageTools = agent.tools.filter(tool => tool.type !== 'image')
+  const nonImageTools = agent.tools.filter((tool: ToolItem) => tool.type !== 'image')
   if (nonImageTools.length > 0) {
     tags.push({
       tag: 'available_tools',
-      value: nonImageTools.map(tool => ({
+      value: nonImageTools.map((tool: ToolItem) => ({
         tag: 'tool',
         value: [
           { tag: 'type', value: tool.type },

@@ -1,7 +1,7 @@
 import { computed, watch, ref } from 'vue'
 import type { CloudAgentDatabaseProvider } from './database/provider'
 import { useAgent } from './useAgent'
-import type { CloudAgent, HistoryItem } from '../types/agent'
+import type { CloudAgent, HistoryItem } from '../core/types/agent'
 
 /** Model identifier (e.g. 'gpt-5.2'). Apps can use a stricter union. */
 export type ModelType = string

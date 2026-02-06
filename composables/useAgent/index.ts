@@ -1,6 +1,6 @@
 import { ref } from 'vue'
-import type { ContextItem } from '../../types/context'
-import type { ToolItem } from '../../types/tool'
+import type { ContextItem } from '../../core/types/context'
+import type { ToolItem } from '../../core/types/tool'
 
 export * from './types'
 export * from './toolConfig'
