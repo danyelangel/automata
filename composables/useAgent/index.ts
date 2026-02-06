@@ -1,5 +1,6 @@
 import { ref } from 'vue'
 import type { ContextItem } from '../../types/context'
+import type { ToolItem } from '../../types/tool'
 
 export * from './types'
 export * from './toolConfig'
@@ -17,9 +18,6 @@ export interface ToolSelectionItem {
   type: string
   name: string
 }
-
-import type { ContextItem } from '../../types/context'
-import type { ToolItem } from '../../types/tool'
 
 const selectedContext = ref<ContextItem[]>([])
 const selectedTools = ref<ToolItem[]>([])

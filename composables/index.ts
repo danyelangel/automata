@@ -5,3 +5,6 @@ export * from './useRulebook'
 export * from './useCloudAgents'
 export * from './useAgent'
 export * from './database/provider'
+
+// Re-export types from automata/types for convenience
+export type { ContextItem, ToolItem } from '../types'
