@@ -1,6 +1,6 @@
-import type { Automation, SkipResult } from '../types/automation'
 import type { ContextItem } from '../types/context'
 import type { ToolRegistry } from '../tools/registry'
+import type { Automation } from '../types/automation'
 
 /**
  * Configuration for creating an automation executor.
@@ -27,7 +27,3 @@ export interface AutomationExecutorConfig {
   /** Optional callback for tracking events */
   track?: (event: string, data?: Record<string, unknown>) => void | Promise<void>
 }
-
-// Re-export types from main types
-export type { Automation, SkipResult } from '../types/automation'
-export type { ContextItem } from '../types/context'

@@ -1,6 +1,5 @@
 import type {
   CloudAgent,
-  HistoryItem,
   AgentProcessResult,
   ControllerOptions
 } from './types'
@@ -30,7 +29,6 @@ export async function processAgentController(
   })
 
   const history = agent.history || []
-  let status = agent.status || 'running'
 
   // Check if agent should not be processed
   if (agent.status && ['paused', 'awaiting_human'].includes(agent.status)) {
@@ -56,7 +54,6 @@ export async function processAgentController(
         lastMessageType: lastMessage.type,
         lastNMessageTypes: lastNMessages.map(msg => msg.type)
       })
-      status = 'paused'
       return { history, status: 'paused' }
     }
   }

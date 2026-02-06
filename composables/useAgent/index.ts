@@ -3,7 +3,6 @@ import type { ContextItem } from '../../types/context'
 
 export * from './types'
 export * from './toolConfig'
-export type { ContextItem } from '../../types/context'
 
 /**
  * Context type is extensible (string). Apps can use unions like 'site' | 'article' | 'brief'.
@@ -13,11 +12,14 @@ export type ContextType = string
 /**
  * UI-facing tool selection item (id for list key, type = tool name, name = label).
  */
-export interface ToolItem {
+export interface ToolSelectionItem {
   id: string
   type: string
   name: string
 }
+
+import type { ContextItem } from '../../types/context'
+import type { ToolItem } from '../../types/tool'
 
 const selectedContext = ref<ContextItem[]>([])
 const selectedTools = ref<ToolItem[]>([])
@@ -42,13 +44,13 @@ export function useAgent() {
   }
 
   const addToTools = (item: ToolItem) => {
-    if (!selectedTools.value.find((i) => i.id === item.id)) {
+    if (!selectedTools.value.find((i) => i.type === item.type)) {
       selectedTools.value.push(item)
     }
   }
 
-  const removeFromTools = (itemId: string) => {
-    selectedTools.value = selectedTools.value.filter((item) => item.id !== itemId)
+  const removeFromTools = (toolType: string) => {
+    selectedTools.value = selectedTools.value.filter((item) => item.type !== toolType)
   }
 
   const setTools = (items: ToolItem[]) => {

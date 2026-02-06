@@ -1,8 +1,7 @@
-import { computed, watch, ref, type Ref } from 'vue'
+import { computed, watch, ref } from 'vue'
 import type { CloudAgentDatabaseProvider } from './database/provider'
 import { useAgent } from './useAgent'
-import type { Item } from './useAgent/types'
-import type { CloudAgent } from '../types/agent'
+import type { CloudAgent, HistoryItem } from '../types/agent'
 
 /** Model identifier (e.g. 'gpt-5.2'). Apps can use a stricter union. */
 export type ModelType = string
@@ -114,12 +113,12 @@ export function useCloudAgents(
     const agent = agents.value.find((a) => a.id === agentId)
     if (!agent) return
 
-    const newMessage: Item = {
+    const newMessage: HistoryItem = {
       content: message,
       role: 'user',
       type: 'message',
     }
-    const updatedHistory = [...(agent.history ?? []), newMessage]
+    const updatedHistory: HistoryItem[] = [...(agent.history ?? []), newMessage]
 
     await provider.updateAgent(agentId, {
       model: selectedModel.value,

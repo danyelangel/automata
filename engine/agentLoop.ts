@@ -114,7 +114,6 @@ export function createAgentLoopHandler(config: AgentLoopConfig): CloudFunctionHa
   // Use custom or default implementations
   const nameGenerator = generateName || ((projectId, history, agentId) =>
     defaultGenerateName(projectId, history, agentId, llmProvider))
-  const rulesLoader = getRules || defaultGetRules
 
   return async (event: DocumentChangeEvent) => {
     const { after, before } = event.data || { after: null, before: null }

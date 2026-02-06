@@ -1,67 +1,12 @@
 import type { ToolRegistry } from '../tools/registry'
+import type { CloudAgent, HistoryItem } from '../types/agent'
+import type { ContextItem } from '../types/context'
+import type { ToolItem } from '../types/tool'
 
 /**
  * Agent status types
  */
 export type AgentStatus = 'running' | 'awaiting_tool' | 'paused' | 'awaiting_human' | 'error'
-
-/**
- * History item representing a message, function call, or tool output
- */
-export interface HistoryItem {
-  type: string
-  role?: string
-  content?: string
-  name?: string
-  arguments?: string
-  call_id?: string
-  output?: string
-  status?: string
-  [key: string]: unknown
-}
-
-/**
- * Context item representing user context (e.g., article, site, brief)
- */
-export interface ContextItem {
-  id: string
-  type: string
-  name: string
-}
-
-/**
- * Tool item representing an available tool
- */
-export interface ToolItem {
-  type: string
-  name: string
-  description?: string
-  parameters?: Record<string, unknown>
-}
-
-/**
- * Cloud agent representation
- */
-export interface CloudAgent {
-  id?: string
-  projectId: string
-  model: string
-  tools: ToolItem[]
-  context: ContextItem[]
-  history: HistoryItem[]
-  status?: AgentStatus
-  name?: string
-  createdAt?: number
-  updatedAt?: number
-  type?: string
-  automationId?: string
-  tokensUsed?: number
-  contextTokens?: number
-  createdBy?: string
-  createdByEmail?: string
-  updatedBy?: string
-  updatedByEmail?: string
-}
 
 /**
  * Result of agent processing

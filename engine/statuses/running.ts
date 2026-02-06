@@ -43,7 +43,7 @@ export async function running(
     const systemPrompt = buildAgentSystemPrompt(agent, rulebookData, options.systemPromptConfig)
 
     // Get available tools from registry
-    const availableTools = options.toolRegistry.listTools()
+    const availableTools = options.toolRegistry.getAvailable()
 
     // Call LLM
     const result = await options.llmProvider.call({
