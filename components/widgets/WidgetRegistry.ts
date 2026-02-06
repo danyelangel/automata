@@ -10,10 +10,32 @@ export class WidgetRegistry {
 
   /**
    * Register a widget for a tool.
+   * If both inputComponent and outputComponent are provided, automatically registers
+   * both the input widget (toolName) and output widget (toolName + "Output").
    * @param widget - The widget definition to register
    */
   register(widget: ToolWidget): void {
-    this.widgets.set(widget.toolName, widget)
+    // Register the input widget if provided
+    if (widget.inputComponent) {
+      this.widgets.set(widget.toolName, {
+        toolName: widget.toolName,
+        inputComponent: widget.inputComponent,
+      })
+    }
+    
+    // Register the output widget if provided
+    if (widget.outputComponent) {
+      // If toolName already ends with "Output", use it as-is
+      // Otherwise append "Output" to the toolName
+      const outputToolName = widget.toolName.endsWith('Output') 
+        ? widget.toolName 
+        : `${widget.toolName}Output`
+      
+      this.widgets.set(outputToolName, {
+        toolName: outputToolName,
+        outputComponent: widget.outputComponent,
+      })
+    }
   }
 
   /**

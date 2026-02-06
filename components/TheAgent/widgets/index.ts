@@ -1,4 +1,6 @@
 export { default as WidgetCard } from './WidgetCard.vue'
 export { default as UnknownFunctionWidget } from './UnknownFunctionWidget.vue'
-export * from './WidgetRegistry'
-export * from './types'
+export { default as SearchWebWidget } from './SearchWebWidget.vue'
+export { default as SearchWebOutputWidget } from './SearchWebOutputWidget.vue'
+export { default as GenerateImageWidget } from './GenerateImageWidget.vue'
+export { default as GenerateImageOutputWidget } from './GenerateImageOutputWidget.vue'
